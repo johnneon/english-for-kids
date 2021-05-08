@@ -1,0 +1,54 @@
+.sup__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1155px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 240px;
+}
+
+.statistick__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 8px;
+  font-size: 1rem;
+
+  border: 1px solid $game-btn-border;
+  background: $game-btn-bg;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s linear;
+
+  color: $game-btn-text;
+
+  &:hover {
+    border: 1px solid $game-btn-border-hover;
+    background: $game-btn-bg-hover;
+    transition: all .3s linear;
+    
+    color: $game-btn-text-hover;
+  }
+  &:first-child {
+    margin-right: 9px;
+  }
+}
+
+@media (max-width: 579px) {
+  .sup__container {
+    flex-wrap: wrap;
+  }
+  .btn__container {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}

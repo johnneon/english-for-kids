@@ -1,0 +1,144 @@
+.stats {
+  width: 100%;
+  max-width: 1155px;
+  padding: 0 15px 70px;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-x: scroll;
+  table {
+    width: 100%;
+    min-width: 970px;
+  }
+  thead {
+    th {
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: "▲";
+        padding-left: 10px;
+      }
+      &.active {
+        &::after {
+          content: "▼";
+          color: $orange
+        }
+      }
+    }
+  }
+  tr {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-bottom: 1px solid $orange;
+  }
+  th, td {
+    border-right: 1px solid $orange;
+  }
+}
+
+.categories {
+  width: 15%;
+  text-align: left;
+}
+.words {
+  width: 15%;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.translation {
+  width: 15%;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.trained {
+  width: 14%;
+  text-align: center;
+}
+
+.correct {
+  width: 14%;
+  text-align: center;
+}
+
+.incorrect {
+  width: 14%;
+  text-align: center;
+}
+
+.percent {
+  width: 14%;
+  text-align: center;
+}
+
+@media (max-width: 970px) {
+  .categories {
+    width: 17%;
+  }
+  .words {
+    width: 17%;
+  }
+  
+  .translation {
+    width: 17%;
+  }
+  
+  .trained {
+    width: 13%;
+  }
+  
+  .correct {
+    width: 13%;
+  }
+  
+  .incorrect {
+    width: 13%;
+  }
+  
+  .percent {
+    width: 13%;
+  }
+}
+
+@media (max-width: 579px) {
+  .stats {
+    padding-bottom: 15px;
+    tr {
+      height: 30px;
+    }
+    table {
+      min-width: 770px;
+    }
+  }
+  th, td {
+    font-size: .88rem;
+  }
+
+  .categories {
+    width: 135px;
+  }
+  .words {
+    width: 110px;
+  }
+  
+  .translation {
+    width: 130px;
+  }
+  
+  .trained {
+    width: 95px;
+  }
+  
+  .correct {
+    width: 95px;
+  }
+  
+  .incorrect {
+    width: 115px;
+  }
+  
+  .percent {
+    width: 75px;
+  }
+}

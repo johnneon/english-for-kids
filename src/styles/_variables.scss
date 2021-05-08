@@ -1,0 +1,25 @@
+$orange-gradient: linear-gradient(180deg, rgba(255,110,38,1) 0%, rgba(255,128,64,1) 50%, rgba(255,110,38,1) 100%);
+$orange: #FF8040;
+$white: #ffffff;
+$black: #222222;
+
+$body-bg: $white; //39AECF
+$body-font: $black;
+
+$header-bg: $white;
+$header-title: $black;
+$header-border: $orange;
+$header-text-shadow: 0 0 13px rgba(255,110,38,1); //0 0 13px rgba(255,255,255,.5)
+$burger: $orange;
+$burger-active: $white;
+$checkbox-text-color: $black;
+$checkbox-main-color: $orange;
+$checkbox-sec-color: #E91E63;
+
+$game-btn-bg: $orange;
+$game-btn-bg-hover: $white;
+$game-btn-text: $white;
+$game-btn-text-hover: $orange;
+$game-btn-border: $orange;
+$game-btn-border-hover: $orange;
+$game-btn-shadow: 0 0 13px rgba(255,110,38,1);

@@ -1,0 +1,62 @@
+.sub__container {
+  width: 100%;
+  max-width: 1155px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 8px;
+  font-size: 1rem;
+
+  border: 1px solid $game-btn-border;
+  background: $game-btn-bg;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s linear;
+
+  color: $game-btn-text;
+
+  &:hover {
+    border: 1px solid $game-btn-border-hover;
+    background: $game-btn-bg-hover;
+    transition: all .3s linear;
+    
+    color: $game-btn-text-hover;
+  }
+
+  &.repeat {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+    &:hover {
+      background: $game-btn-bg;
+      box-shadow: $game-btn-shadow;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
+  img {
+    width: 100%;
+    max-width: 30px;
+    display: block;
+  }
+}

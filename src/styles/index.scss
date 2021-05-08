@@ -1,0 +1,40 @@
+@import "./variables";
+@import "./header";
+@import "./footer";
+@import "./menu";
+@import "./cards";
+@import "./table";
+@import "./subcontainer";
+@import "./supcontainer";
+@import "./finish-screen";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: $body-font;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  background: $body-bg;
+  overflow: hidden;
+}
+
+@media (max-width: 579px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,143 @@
+.header {
+  background: $header-bg;
+  border-bottom: 1px solid $header-border;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1155px;
+  padding: 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header__title {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+
+  text-align: center;
+  color: $header-title;
+  text-shadow: $header-text-shadow;
+}
+
+.burger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  & span {
+    width: 40px;
+    height: 6px;
+    border-radius: 5px;
+    background: $burger;
+    position: relative;
+    transition: all .3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      border-radius: 5px;
+      background: $burger;
+      transition: all .3s linear;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      border-radius: 5px;
+      background: $burger;
+      transition: all .3s linear;
+    }
+  }
+  &.active {
+    & span {
+      background: transparent;
+      transition: all .3s linear;
+  
+      &::before {
+        background: $burger-active;
+        transform: rotate(-45deg);
+        transition: all .3s linear;
+        top: 0;
+      }
+      &::after {
+        background: $burger-active;
+        transform: rotate(45deg);
+        transition: all .3s linear;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.switcher {
+  input {
+    display: none;
+    opacity: 0;
+    border: 0;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    width: 90px;
+    padding: 5px 8px;
+    position: relative;
+    border-radius: 14px;
+    border: 1px solid $checkbox-main-color;
+    color: $checkbox-text-color;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(100% - 28px);
+      width: 28px;
+      height: 100%;
+      background: $checkbox-main-color;
+      border-radius: 50%;
+      transition: all .1s linear;
+    }
+  }
+  input:checked + label {
+    color: $checkbox-text-color;
+    text-align: right;
+    border-color: $checkbox-sec-color;
+    &::after {
+      content: "";
+      position: absolute;
+      right: auto;
+      left: 0;
+      background: $checkbox-sec-color;
+      transition: all .1s linear;
+    }
+  }
+}
+
+@media (max-width: 579px) {
+  .header__title {
+    font-size: 1rem;
+  }
+  .switcher {
+    label {
+      width: 78px;
+      font-size: .8rem;
+    }
+  }
+}
